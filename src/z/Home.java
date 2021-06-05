@@ -11,11 +11,14 @@ package z;
  */
 public class Home extends javax.swing.JFrame {
 
-    /**
-     * Creates new form Home
-     */
+    
+    int Sateayam, Ayambakar, Ayampenyet, Tehmanis, Aqua, satuporsi, duaporsi, tigaporsi, empatporsi, bayarre, kembaliane, total, beli, harga;
+    
+    
+    
     public Home() {
         initComponents();
+        combomenu.setSelectedIndex(0);
     }
 
     /**
@@ -27,21 +30,426 @@ public class Home extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jMenu1 = new javax.swing.JMenu();
+        jInternalFrame1 = new javax.swing.JInternalFrame();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jList1 = new javax.swing.JList<>();
+        jRadioButton1 = new javax.swing.JRadioButton();
+        buttonGroup1 = new javax.swing.ButtonGroup();
+        buttonGroup2 = new javax.swing.ButtonGroup();
+        buttonGroup3 = new javax.swing.ButtonGroup();
+        buttonGroup4 = new javax.swing.ButtonGroup();
+        buttonGroup5 = new javax.swing.ButtonGroup();
+        buttonGroup6 = new javax.swing.ButtonGroup();
+        panel1 = new java.awt.Panel();
+        jLabel1 = new javax.swing.JLabel();
+        combomenu = new javax.swing.JComboBox<>();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        txtharga = new javax.swing.JLabel();
+        r1 = new javax.swing.JRadioButton();
+        r2 = new javax.swing.JRadioButton();
+        r3 = new javax.swing.JRadioButton();
+        r4 = new javax.swing.JRadioButton();
+        buttonbayar = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
+        txtbayar = new javax.swing.JLabel();
+        txtkembalian = new javax.swing.JLabel();
+        txtbayarre = new javax.swing.JTextField();
+        txtkembaliane = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
+        txtbayartotal = new javax.swing.JTextField();
+        txtjumlahbeli = new javax.swing.JLabel();
+        txtjbl = new javax.swing.JTextField();
+
+        jMenu1.setText("jMenu1");
+
+        jInternalFrame1.setVisible(true);
+
+        javax.swing.GroupLayout jInternalFrame1Layout = new javax.swing.GroupLayout(jInternalFrame1.getContentPane());
+        jInternalFrame1.getContentPane().setLayout(jInternalFrame1Layout);
+        jInternalFrame1Layout.setHorizontalGroup(
+            jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        jInternalFrame1Layout.setVerticalGroup(
+            jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+
+        jList1.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane1.setViewportView(jList1);
+
+        jRadioButton1.setText("jRadioButton1");
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        jLabel1.setText("Daftar Makanan");
+
+        combomenu.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pilih Menu", "Sate ayam", "Ayam bakar", "Ayam Bakar", "Ayam Penyet", "Teh Manis", "Aqua" }));
+        combomenu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                combomenuActionPerformed(evt);
+            }
+        });
+
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel2.setText("Menu");
+
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel3.setText("Pesanan");
+
+        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel4.setText("Harga");
+
+        r1.setText("satu porsi");
+        r1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                r1ActionPerformed(evt);
+            }
+        });
+
+        r2.setText("dua porsi");
+        r2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                r2ActionPerformed(evt);
+            }
+        });
+
+        r3.setText("tiga porsi");
+        r3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                r3ActionPerformed(evt);
+            }
+        });
+
+        r4.setText("empat porsi");
+        r4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                r4ActionPerformed(evt);
+            }
+        });
+
+        buttonbayar.setText("Bayar");
+        buttonbayar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonbayarActionPerformed(evt);
+            }
+        });
+
+        jButton1.setText("Back");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        txtbayar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txtbayar.setText("Bayar");
+
+        txtkembalian.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txtkembalian.setText("Kembalian");
+
+        txtbayarre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtbayarreActionPerformed(evt);
+            }
+        });
+        txtbayarre.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtbayarreKeyReleased(evt);
+            }
+        });
+
+        txtkembaliane.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtkembalianeActionPerformed(evt);
+            }
+        });
+
+        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel5.setText("Total Bayar");
+
+        txtbayartotal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtbayartotalActionPerformed(evt);
+            }
+        });
+
+        txtjumlahbeli.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txtjumlahbeli.setText("Jumlah beli");
+
+        txtjbl.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtjblActionPerformed(evt);
+            }
+        });
+        txtjbl.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtjblKeyReleased(evt);
+            }
+        });
+
+        javax.swing.GroupLayout panel1Layout = new javax.swing.GroupLayout(panel1);
+        panel1.setLayout(panel1Layout);
+        panel1Layout.setHorizontalGroup(
+            panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel1Layout.createSequentialGroup()
+                .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(txtkembalian)
+                        .addGap(11, 11, 11))
+                    .addGroup(panel1Layout.createSequentialGroup()
+                        .addGap(24, 24, 24)
+                        .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel3)
+                            .addComponent(jLabel4)
+                            .addComponent(txtbayar)
+                            .addComponent(txtjumlahbeli)))
+                    .addGroup(panel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel5)))
+                .addGap(33, 33, 33)
+                .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(combomenu, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtharga, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(panel1Layout.createSequentialGroup()
+                        .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(r1)
+                            .addComponent(r3))
+                        .addGap(18, 18, 18)
+                        .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(r4)
+                            .addComponent(r2)))
+                    .addGroup(panel1Layout.createSequentialGroup()
+                        .addGap(3, 3, 3)
+                        .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(txtkembaliane)
+                            .addComponent(txtbayartotal)
+                            .addComponent(txtbayarre)
+                            .addComponent(txtjbl, javax.swing.GroupLayout.DEFAULT_SIZE, 126, Short.MAX_VALUE))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(panel1Layout.createSequentialGroup()
+                .addContainerGap(91, Short.MAX_VALUE)
+                .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel1Layout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addGap(53, 53, 53))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel1Layout.createSequentialGroup()
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(buttonbayar)
+                        .addContainerGap())))
+        );
+        panel1Layout.setVerticalGroup(
+            panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel1Layout.createSequentialGroup()
+                .addGap(37, 37, 37)
+                .addComponent(jLabel1)
+                .addGap(49, 49, 49)
+                .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(combomenu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(43, 43, 43)
+                .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3)
+                    .addComponent(r1)
+                    .addComponent(r2))
+                .addGap(13, 13, 13)
+                .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(r3)
+                    .addComponent(r4))
+                .addGap(18, 18, 18)
+                .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel4)
+                    .addComponent(txtharga, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panel1Layout.createSequentialGroup()
+                        .addGap(42, 42, 42)
+                        .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(txtjumlahbeli)
+                            .addComponent(txtjbl, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(24, 24, 24)
+                        .addComponent(txtbayar))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel1Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtbayarre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel5)
+                    .addComponent(txtbayartotal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtkembaliane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtkembalian))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(buttonbayar)
+                    .addComponent(jButton1))
+                .addContainerGap())
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(panel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(panel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void combomenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_combomenuActionPerformed
+        // TODO add your handling code here:
+        if(combomenu.getSelectedItem().equals("pilih menu")){
+            buttonGroup2.clearSelection();
+            txtharga.setText("");
+        }
+        else if(combomenu.getSelectedItem().equals("Sate ayam")){
+            satuporsi = 20000;
+            duaporsi = 25000;
+            tigaporsi = 30000;
+            empatporsi = 35000;
+        }
+        else if(combomenu.getSelectedItem().equals("Ayam bakar")){
+            satuporsi = 25000;
+            duaporsi = 30000;
+            tigaporsi = 35000;
+            empatporsi = 40000;
+        }
+        else if(combomenu.getSelectedItem().equals("Ayam penyet")){
+            satuporsi = 15000;
+            duaporsi = 18000;
+            tigaporsi = 220000;
+            empatporsi = 28000;
+        }
+        else if(combomenu.getSelectedItem().equals("Teh Manis")){
+            satuporsi = 5000;
+            duaporsi = 10000;
+            tigaporsi = 15000;
+            empatporsi = 20000;
+        }
+        else if(combomenu.getSelectedItem().equals("Aqua")){
+            satuporsi = 3000;
+            duaporsi = 6000;
+            tigaporsi = 9000;
+            empatporsi = 12000;
+        }
+    }//GEN-LAST:event_combomenuActionPerformed
+
+    private void r1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_r1ActionPerformed
+        // TODO add your handling code here:
+        if(r1.isSelected()){
+            txtharga.setText(String.valueOf(satuporsi));
+        }
+    }//GEN-LAST:event_r1ActionPerformed
+
+    private void r2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_r2ActionPerformed
+        // TODO add your handling code here:
+        if(r2.isSelected()){
+            txtharga.setText(String.valueOf(duaporsi));
+        }
+    }//GEN-LAST:event_r2ActionPerformed
+
+    private void r3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_r3ActionPerformed
+        // TODO add your handling code here:
+        if(r3.isSelected()){
+            txtharga.setText(String.valueOf(tigaporsi));
+        }
+    }//GEN-LAST:event_r3ActionPerformed
+
+    private void r4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_r4ActionPerformed
+        // TODO add your handling code here:
+        if(r4.isSelected()){
+            txtharga.setText(String.valueOf(empatporsi));
+        }
+    }//GEN-LAST:event_r4ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        Login log = new Login();
+        log.setVisible(true);
+        log.setLocationRelativeTo(null);
+        this.setVisible(false);
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void txtbayarreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtbayarreActionPerformed
+        // TODO add your handling code here:
+        bayarre = Integer.parseInt(txtbayarre.getText());
+        kembaliane = Integer.parseInt(txtbayartotal.getText());
+        total = bayarre-kembaliane;
+        txtkembaliane.setText(String.valueOf(bayarre));
+    }//GEN-LAST:event_txtbayarreActionPerformed
+
+    private void txtbayartotalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtbayartotalActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtbayartotalActionPerformed
+
+    private void txtkembalianeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtkembalianeActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_txtkembalianeActionPerformed
+
+    private void txtbayarreKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtbayarreKeyReleased
+        // TODO add your handling code here:
+        int a,b,c;
+        a = Integer.valueOf(txtbayarre.getText());
+        b = Integer.valueOf(txtbayartotal.getText());
+        c = a-b;
+        txtkembaliane.setText(""+c);
+    }//GEN-LAST:event_txtbayarreKeyReleased
+
+    private void buttonbayarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonbayarActionPerformed
+        // TODO add your handling code here:
+        String byr = txtbayarre.getText();
+        String tbr = txtbayartotal.getText();
+        String kmb = txtkembaliane.getText();
+        String cmm = combomenu.getSelectedItem().toString();
+        
+        Output ps = new Output();
+        ps.lblnamapesanan.setText(": "+cmm);
+        ps.lbljumlah.setText(": "+tbr);
+        ps.lblbayar.setText(": "+tbr);
+        ps.lblkembalian.setText(": "+kmb);
+        
+        this.setVisible(false); 
+        ps.setVisible(true);
+    }//GEN-LAST:event_buttonbayarActionPerformed
+
+    private void txtjblActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtjblActionPerformed
+        // TODO add your handling code here:
+        beli = Integer.parseInt(txtjumlahbeli.getText());
+        kembaliane = Integer.parseInt(txtharga.getText());
+        total = bayarre*harga;
+        txtbayarre.setText(String.valueOf(total));
+    }//GEN-LAST:event_txtjblActionPerformed
+
+    private void txtjblKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtjblKeyReleased
+        int a, b, c;
+        a = Integer.valueOf(txtharga.getText());
+        b = Integer.valueOf(txtjbl.getText());
+        c = a*b;
+        txtbayartotal.setText(""+c);        // TODO add your handling code here:
+    }//GEN-LAST:event_txtjblKeyReleased
 
     /**
      * @param args the command line arguments
@@ -79,5 +487,37 @@ public class Home extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.ButtonGroup buttonGroup2;
+    private javax.swing.ButtonGroup buttonGroup3;
+    private javax.swing.ButtonGroup buttonGroup4;
+    private javax.swing.ButtonGroup buttonGroup5;
+    private javax.swing.ButtonGroup buttonGroup6;
+    private javax.swing.JButton buttonbayar;
+    private javax.swing.JComboBox<String> combomenu;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JInternalFrame jInternalFrame1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JList<String> jList1;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JRadioButton jRadioButton1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private java.awt.Panel panel1;
+    private javax.swing.JRadioButton r1;
+    private javax.swing.JRadioButton r2;
+    private javax.swing.JRadioButton r3;
+    private javax.swing.JRadioButton r4;
+    private javax.swing.JLabel txtbayar;
+    private javax.swing.JTextField txtbayarre;
+    private javax.swing.JTextField txtbayartotal;
+    private javax.swing.JLabel txtharga;
+    private javax.swing.JTextField txtjbl;
+    private javax.swing.JLabel txtjumlahbeli;
+    private javax.swing.JLabel txtkembalian;
+    private javax.swing.JTextField txtkembaliane;
     // End of variables declaration//GEN-END:variables
 }
