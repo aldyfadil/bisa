@@ -12,7 +12,7 @@ package z;
 public class Home extends javax.swing.JFrame {
 
     
-    int Sateayam, Ayambakar, Ayampenyet, Tehmanis, Aqua, satuporsi, duaporsi, tigaporsi, empatporsi, bayarre, kembaliane, total, beli, harga;
+    int Sateayam, Ayambakar, Ayampenyet, Tehmanis, Aqua, bayarre, kembaliane, total, beli, harga, driveTrue, makanDiTempat;
     
     
     
@@ -41,6 +41,7 @@ public class Home extends javax.swing.JFrame {
         buttonGroup4 = new javax.swing.ButtonGroup();
         buttonGroup5 = new javax.swing.ButtonGroup();
         buttonGroup6 = new javax.swing.ButtonGroup();
+        buttonGroup7 = new javax.swing.ButtonGroup();
         panel1 = new java.awt.Panel();
         jLabel1 = new javax.swing.JLabel();
         combomenu = new javax.swing.JComboBox<>();
@@ -50,8 +51,6 @@ public class Home extends javax.swing.JFrame {
         txtharga = new javax.swing.JLabel();
         r1 = new javax.swing.JRadioButton();
         r2 = new javax.swing.JRadioButton();
-        r3 = new javax.swing.JRadioButton();
-        r4 = new javax.swing.JRadioButton();
         buttonbayar = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         txtbayar = new javax.swing.JLabel();
@@ -103,36 +102,24 @@ public class Home extends javax.swing.JFrame {
         jLabel2.setText("Menu");
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel3.setText("Pesanan");
+        jLabel3.setText("Type Pesanan");
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel4.setText("Harga");
 
-        r1.setText("satu porsi");
+        buttonGroup1.add(r1);
+        r1.setText("Drive Thrue");
         r1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 r1ActionPerformed(evt);
             }
         });
 
-        r2.setText("dua porsi");
+        buttonGroup1.add(r2);
+        r2.setText("Makan di Tempat");
         r2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 r2ActionPerformed(evt);
-            }
-        });
-
-        r3.setText("tiga porsi");
-        r3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                r3ActionPerformed(evt);
-            }
-        });
-
-        r4.setText("empat porsi");
-        r4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                r4ActionPerformed(evt);
             }
         });
 
@@ -201,54 +188,45 @@ public class Home extends javax.swing.JFrame {
         panel1Layout.setHorizontalGroup(
             panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panel1Layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(txtkembalian)
-                        .addGap(11, 11, 11))
                     .addGroup(panel1Layout.createSequentialGroup()
-                        .addGap(24, 24, 24)
                         .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel4)
                             .addComponent(txtbayar)
-                            .addComponent(txtjumlahbeli)))
-                    .addGroup(panel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel5)))
-                .addGap(33, 33, 33)
-                .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(combomenu, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(txtharga, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(panel1Layout.createSequentialGroup()
+                            .addComponent(txtkembalian)
+                            .addComponent(txtjumlahbeli)
+                            .addComponent(jLabel4)
+                            .addComponent(jLabel3)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel5))
+                        .addGap(44, 44, 44)
                         .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(r1)
-                            .addComponent(r3))
-                        .addGap(18, 18, 18)
-                        .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(r4)
-                            .addComponent(r2)))
+                            .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(combomenu, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txtharga, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(panel1Layout.createSequentialGroup()
+                                .addComponent(r1)
+                                .addGap(18, 18, 18)
+                                .addComponent(r2))
+                            .addGroup(panel1Layout.createSequentialGroup()
+                                .addGap(3, 3, 3)
+                                .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(txtkembaliane)
+                                    .addComponent(txtbayartotal)
+                                    .addComponent(txtbayarre)
+                                    .addComponent(txtjbl, javax.swing.GroupLayout.DEFAULT_SIZE, 126, Short.MAX_VALUE))))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(panel1Layout.createSequentialGroup()
-                        .addGap(3, 3, 3)
-                        .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txtkembaliane)
-                            .addComponent(txtbayartotal)
-                            .addComponent(txtbayarre)
-                            .addComponent(txtjbl, javax.swing.GroupLayout.DEFAULT_SIZE, 126, Short.MAX_VALUE))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(panel1Layout.createSequentialGroup()
-                .addContainerGap(91, Short.MAX_VALUE)
-                .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel1Layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addGap(53, 53, 53))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel1Layout.createSequentialGroup()
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(buttonbayar)
-                        .addContainerGap())))
+                        .addGap(0, 81, Short.MAX_VALUE)
+                        .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel1Layout.createSequentialGroup()
+                                .addComponent(jLabel1)
+                                .addGap(53, 53, 53))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel1Layout.createSequentialGroup()
+                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(buttonbayar)
+                                .addContainerGap())))))
         );
         panel1Layout.setVerticalGroup(
             panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -264,30 +242,23 @@ public class Home extends javax.swing.JFrame {
                     .addComponent(jLabel3)
                     .addComponent(r1)
                     .addComponent(r2))
-                .addGap(13, 13, 13)
-                .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(r3)
-                    .addComponent(r4))
-                .addGap(18, 18, 18)
-                .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGap(54, 54, 54)
+                .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel4)
                     .addComponent(txtharga, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(panel1Layout.createSequentialGroup()
-                        .addGap(42, 42, 42)
-                        .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(txtjumlahbeli)
-                            .addComponent(txtjbl, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(24, 24, 24)
-                        .addComponent(txtbayar))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel1Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtbayarre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel5)
-                    .addComponent(txtbayartotal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(27, 27, 27)
+                .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtjumlahbeli)
+                    .addComponent(txtjbl, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtbayarre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtbayar))
+                .addGap(17, 17, 17)
+                .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtbayartotal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel5))
+                .addGap(18, 18, 18)
                 .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtkembaliane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtkembalian))
@@ -295,7 +266,7 @@ public class Home extends javax.swing.JFrame {
                 .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(buttonbayar)
                     .addComponent(jButton1))
-                .addContainerGap())
+                .addGap(18, 18, 18))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -325,64 +296,26 @@ public class Home extends javax.swing.JFrame {
             txtharga.setText("");
         }
         else if(combomenu.getSelectedItem().equals("Sate ayam")){
-            satuporsi = 20000;
-            duaporsi = 25000;
-            tigaporsi = 30000;
-            empatporsi = 35000;
+            makanDiTempat = 20000;
+            driveTrue = 20000;
         }
         else if(combomenu.getSelectedItem().equals("Ayam bakar")){
-            satuporsi = 25000;
-            duaporsi = 30000;
-            tigaporsi = 35000;
-            empatporsi = 40000;
+            makanDiTempat = 23000;
+            driveTrue = 23000;
         }
         else if(combomenu.getSelectedItem().equals("Ayam penyet")){
-            satuporsi = 15000;
-            duaporsi = 18000;
-            tigaporsi = 220000;
-            empatporsi = 28000;
+            makanDiTempat = 18000;
+            driveTrue = 18000;
         }
         else if(combomenu.getSelectedItem().equals("Teh Manis")){
-            satuporsi = 5000;
-            duaporsi = 10000;
-            tigaporsi = 15000;
-            empatporsi = 20000;
+            makanDiTempat = 5000;
+            driveTrue = 5000;
         }
         else if(combomenu.getSelectedItem().equals("Aqua")){
-            satuporsi = 3000;
-            duaporsi = 6000;
-            tigaporsi = 9000;
-            empatporsi = 12000;
+            makanDiTempat = 3000;
+            driveTrue = 3000;
         }
     }//GEN-LAST:event_combomenuActionPerformed
-
-    private void r1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_r1ActionPerformed
-        // TODO add your handling code here:
-        if(r1.isSelected()){
-            txtharga.setText(String.valueOf(satuporsi));
-        }
-    }//GEN-LAST:event_r1ActionPerformed
-
-    private void r2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_r2ActionPerformed
-        // TODO add your handling code here:
-        if(r2.isSelected()){
-            txtharga.setText(String.valueOf(duaporsi));
-        }
-    }//GEN-LAST:event_r2ActionPerformed
-
-    private void r3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_r3ActionPerformed
-        // TODO add your handling code here:
-        if(r3.isSelected()){
-            txtharga.setText(String.valueOf(tigaporsi));
-        }
-    }//GEN-LAST:event_r3ActionPerformed
-
-    private void r4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_r4ActionPerformed
-        // TODO add your handling code here:
-        if(r4.isSelected()){
-            txtharga.setText(String.valueOf(empatporsi));
-        }
-    }//GEN-LAST:event_r4ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
@@ -422,16 +355,17 @@ public class Home extends javax.swing.JFrame {
         // TODO add your handling code here:
         String byr = txtbayarre.getText();
         String tbr = txtbayartotal.getText();
+        // TODO add your handling code here:
+        int a,b,c;
         String kmb = txtkembaliane.getText();
+        String hrg = txtharga.getText();
+        String jbl = txtjbl.getText();
         String cmm = combomenu.getSelectedItem().toString();
         
         Output ps = new Output();
-        ps.lblnamapesanan.setText(": "+cmm);
-        ps.lbljumlah.setText(": "+tbr);
-        ps.lblbayar.setText(": "+tbr);
-        ps.lblkembalian.setText(": "+kmb);
+        ps..setText(": "+cmm);
         
-        this.setVisible(false); 
+        this.setVisible(false);
         ps.setVisible(true);
     }//GEN-LAST:event_buttonbayarActionPerformed
 
@@ -450,6 +384,20 @@ public class Home extends javax.swing.JFrame {
         c = a*b;
         txtbayartotal.setText(""+c);        // TODO add your handling code here:
     }//GEN-LAST:event_txtjblKeyReleased
+
+    private void r2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_r2ActionPerformed
+        // TODO add your handling code here:
+        if(r2.isSelected()){
+            txtharga.setText(String.valueOf(makanDiTempat));
+        }
+    }//GEN-LAST:event_r2ActionPerformed
+
+    private void r1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_r1ActionPerformed
+        // TODO add your handling code here:
+        if(r1.isSelected()){
+            txtharga.setText(String.valueOf(driveTrue));
+        }
+    }//GEN-LAST:event_r1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -493,6 +441,7 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.ButtonGroup buttonGroup4;
     private javax.swing.ButtonGroup buttonGroup5;
     private javax.swing.ButtonGroup buttonGroup6;
+    private javax.swing.ButtonGroup buttonGroup7;
     private javax.swing.JButton buttonbayar;
     private javax.swing.JComboBox<String> combomenu;
     private javax.swing.JButton jButton1;
@@ -509,8 +458,6 @@ public class Home extends javax.swing.JFrame {
     private java.awt.Panel panel1;
     private javax.swing.JRadioButton r1;
     private javax.swing.JRadioButton r2;
-    private javax.swing.JRadioButton r3;
-    private javax.swing.JRadioButton r4;
     private javax.swing.JLabel txtbayar;
     private javax.swing.JTextField txtbayarre;
     private javax.swing.JTextField txtbayartotal;

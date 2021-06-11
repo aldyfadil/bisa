@@ -53,6 +53,12 @@ public class Login extends javax.swing.JFrame {
 
         jLabel4.setText("Password");
 
+        txtusername2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtusername2ActionPerformed(evt);
+            }
+        });
+
         jButton1.setText("Login");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -68,6 +74,12 @@ public class Login extends javax.swing.JFrame {
         });
 
         jLabel5.setText("Please insert your account!");
+
+        txtpassword3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtpassword3ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout panel1Layout = new javax.swing.GroupLayout(panel1);
         panel1.setLayout(panel1Layout);
@@ -164,6 +176,14 @@ public class Login extends javax.swing.JFrame {
             hom.setDefaultCloseOperation(Registrasi.EXIT_ON_CLOSE);
             this.setVisible(false);
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void txtusername2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtusername2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtusername2ActionPerformed
+
+    private void txtpassword3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtpassword3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtpassword3ActionPerformed
 
     /**
      * @param args the command line arguments
