@@ -241,7 +241,7 @@ public class Output extends javax.swing.JFrame {
     private javax.swing.JLabel lblhar;
     private javax.swing.JLabel lbljmps;
     private javax.swing.JLabel lblkmb;
-    private javax.swing.JLabel lblnmps;
+    javax.swing.JLabel lblnmps;
     private javax.swing.JLabel lbltopem;
     private java.awt.Panel panel1;
     // End of variables declaration//GEN-END:variables
