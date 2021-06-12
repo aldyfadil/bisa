@@ -355,15 +355,14 @@ public class Home extends javax.swing.JFrame {
         // TODO add your handling code here:
         String byr = txtbayarre.getText();
         String tbr = txtbayartotal.getText();
-        // TODO add your handling code here:
-        int a,b,c;
         String kmb = txtkembaliane.getText();
         String hrg = txtharga.getText();
         String jbl = txtjbl.getText();
         String cmm = combomenu.getSelectedItem().toString();
         
         Output ps = new Output();
-        ps..setText(": "+cmm);
+        ps.lblnmps.setText("  :"+cmm);
+        ps.lblhar.setText("  :"+hrg);
         
         this.setVisible(false);
         ps.setVisible(true);
