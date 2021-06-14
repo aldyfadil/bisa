@@ -73,7 +73,7 @@ public class Output extends javax.swing.JFrame {
 
         jLabel6.setText("Jumlah Pesanan");
 
-        jLabel8.setText("Total Pembayaran");
+        jLabel8.setText("Yang harus di bayar");
 
         javax.swing.GroupLayout panel1Layout = new javax.swing.GroupLayout(panel1);
         panel1.setLayout(panel1Layout);
@@ -237,12 +237,12 @@ public class Output extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel lblbayar;
+    javax.swing.JLabel lblbayar;
     javax.swing.JLabel lblhar;
-    private javax.swing.JLabel lbljmps;
-    private javax.swing.JLabel lblkmb;
+    javax.swing.JLabel lbljmps;
+    javax.swing.JLabel lblkmb;
     javax.swing.JLabel lblnmps;
-    private javax.swing.JLabel lbltopem;
+    javax.swing.JLabel lbltopem;
     private java.awt.Panel panel1;
     // End of variables declaration//GEN-END:variables
 }
