@@ -238,7 +238,7 @@ public class Output extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel lblbayar;
-    private javax.swing.JLabel lblhar;
+    javax.swing.JLabel lblhar;
     private javax.swing.JLabel lbljmps;
     private javax.swing.JLabel lblkmb;
     javax.swing.JLabel lblnmps;

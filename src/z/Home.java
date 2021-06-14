@@ -361,8 +361,12 @@ public class Home extends javax.swing.JFrame {
         String cmm = combomenu.getSelectedItem().toString();
         
         Output ps = new Output();
-        ps.lblnmps.setText("  :"+cmm);
-        ps.lblhar.setText("  :"+hrg);
+        ps.lblnmps.setText(" :"+cmm);
+        ps.lblhar.setText(" :"+hrg);
+        ps.lbljmps.setText(" :"+jbl);
+        ps.lblbayar.setText(" :"+byr);
+        ps.lbltopem.setText(" :"+tbr);
+        ps.lblkmb.setText(" :"+kmb);
         
         this.setVisible(false);
         ps.setVisible(true);
