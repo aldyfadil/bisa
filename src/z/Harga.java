@@ -10,7 +10,7 @@ package z;
  * @author aldi
  */
 public class Harga {
-    public double Batar, kembalian, kekurangan, total;
+    public double Bayar, kembalian, kekurangan, total;
     protected int jumlah, pilihan;
     static final String selamat = "     =>      [WARDA]     <=      ";
     
