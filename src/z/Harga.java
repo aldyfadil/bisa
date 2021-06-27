@@ -22,7 +22,7 @@ public class Harga {
                 System.exit(0);
                 break;
             case 1 :
-                harga = 5000;
+                harga = 3000;
                 total = total + (harga * jumlah);
                 break;
             case 2 :
@@ -42,8 +42,10 @@ public class Harga {
                 total = total + (harga * jumlah);
                 break;
             case 6 :
-                harga = 3000;
+                harga = 5000;
                 total = total + (harga * jumlah);
+                break;
+            case 9 :
                 break;
 
             default :
