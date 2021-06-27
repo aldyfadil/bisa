@@ -45,10 +45,7 @@ public class Harga {
                 harga = 3000;
                 total = total + (harga * jumlah);
                 break;
-            case 9 :
-                harga = 5000;
-                total = total + (harga * jumlah);
-                break;
+
             default :
                 System.out.println("ERROR : input yang di masukkan salah !");
                 
